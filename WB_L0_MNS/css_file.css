@@ -1312,7 +1312,7 @@ input[type="radio"] {
     width: calc(100% - 96px - 20px);
 }
 .basket-page .basket-form__sidebar {
-    width: 340px;
+    width: 100%;
     position: relative;
     flex-shrink: 0;
     margin-top: 0;
@@ -1441,18 +1441,10 @@ input[type="radio"] {
     }
     .basket-page .basket-order {
         padding: 16px;
-    }
-    .basket-page .basket-order {
-        padding: 16px;
         background-color: #ffffff;
     }
 }
 
-@media (max-width: 1024px) {
-    .basket-page .basket-form__sidebar {
-        width: 304px;
-    }
-}
 
 @media (min-width: 1024px) {
     .header {
@@ -1842,6 +1834,12 @@ input[type="radio"] {
     }
     .burger_mob {
         display: none;
+    }
+    .basket-page .basket-form__sidebar {
+        width: 340px;
+        position: relative;
+        flex-shrink: 0;
+        margin-top: 0;
     }
 }
 
