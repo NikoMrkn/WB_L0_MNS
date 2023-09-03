@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Корзина</title>
     <link rel="stylesheet" href="css_file.css">
 </head>
@@ -49,6 +50,7 @@
 </div>
 <header class="header">
     <div class="header__navi">
+        <button type="button"><img src="header/burger_mobile.png" alt="burg_mob" class="burger_mob"></button>
         <div class="header__nav-element">
             <button type="button" class="nav-element-burger">
                 <span class="nav-element-burger-line"></span>
@@ -56,13 +58,12 @@
             <a href="#" class="header__logo"><h1 class="header_nav-element-logo">ТОВАРЫ И ТОЧКА</h1></a>
         </div>
         <div class="header__search-catalog">
-            <input class="header__search-input hide-mobile" placeholder="Я ищу..." type="search" maxlength="300">
+            <input class="header__search-input" placeholder="Я ищу..." type="search" maxlength="300">
             <button class="search-catalog__btn search-catalog_btn-search" type="button">Поиск товара</button>
         </div>
-        <div class="header__navbar-pc navbar-pc hide-mobile">
+        <div class="header__navbar-pc navbar-pc">
             <div class="navbar-pc__item">
                 <a class="navbar-pc__link"><span class="navbar-pc__icon navbar-pc__icon--profile"></span>Профиль</a>
-
             </div>
             <div class="navbar-pc__item">
                 <a class="navbar-pc__link"><span class="navbar-pc__icon navbar-pc__icon--backet"><span class="navbar-pc__notify">3</span></span>Корзина</a>
@@ -92,7 +93,7 @@
                                     </div>
                                     <div class="accordion__icon"></div>
                                 </div>
-                                    <div class="accordion__list"></div>
+                                    <div class="accordion__list basket-section__available"></div>
                             </div>
                         </div>
                         <div class="basket-section basket-section___not-available">
@@ -116,9 +117,11 @@
                                             </div>
                                             <div class="list-item__count-price">
                                                 <div class="list-item__count count">
-                                                    <div class="list-item__btn btn">
-                                                        <button type="button" class="btn__postpone"><span>В избранное</span></button>
-                                                        <button type="button" class="btn__del"><span>Удалить</span></button>
+                                                    <div class="action__btn">
+                                                        <div class="list-item__btn btn">
+                                                            <button type="button" class="btn__postpone"><span>В избранное</span></button>
+                                                            <button type="button" class="btn__del"><span>Удалить</span></button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="list-item__price">
@@ -139,9 +142,11 @@
                                             </div>
                                             <div class="list-item__count-price">
                                                 <div class="list-item__count count">
-                                                    <div class="list-item__btn btn">
-                                                        <button type="button" class="btn__postpone"><span>В избранное</span></button>
-                                                        <button type="button" class="btn__del"><span>Удалить</span></button>
+                                                    <div class="action__btn">
+                                                        <div class="list-item__btn btn">
+                                                            <button type="button" class="btn__postpone"><span>В избранное</span></button>
+                                                            <button type="button" class="btn__del"><span>Удалить</span></button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="list-item__price">
@@ -159,9 +164,11 @@
                                             </div>
                                             <div class="list-item__count-price">
                                                 <div class="list-item__count count">
-                                                    <div class="list-item__btn btn">
-                                                        <button type="button" class="btn__postpone"><span>В избранное</span></button>
-                                                        <button type="button" class="btn__del"><span>Удалить</span></button>
+                                                    <div class="action__btn">
+                                                        <div class="list-item__btn btn">
+                                                            <button type="button" class="btn__postpone"><span>В избранное</span></button>
+                                                            <button type="button" class="btn__del"><span>Удалить</span></button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="list-item__price">
@@ -175,7 +182,7 @@
                         <div class="basket-radius first__basket-radius">
                             <div class="basket-section__header-wrap">
                                 <div class="title-btn">
-                                    <h2 class="basket-section__header hide-mobile">Способ доставки</h2>
+                                    <h2 class="basket-section__header">Способ доставки</h2>
                                     <button type="button" class="not-chg_edit-btn edit-delivery"><span>Изменить</span></button>
                                 </div>
                             </div>
@@ -220,7 +227,7 @@
                         <div class="basket-radius">
                             <div class="basket-section__header-wrap">
                                 <div class="title-btn">
-                                    <h2 class="basket-section__header hide-mobile">Способ оплаты</h2>
+                                    <h2 class="basket-section__header">Способ оплаты</h2>
                                     <button type="button" class="not-chg_edit-btn edit-payment"><span>Изменить</span></button>
                                 </div>
                             </div>
@@ -233,7 +240,7 @@
                         </div>
                         <div class="basket-radius">
                             <div class="basket-section__header-wrap">
-                                <h2 class="basket-section__header hide-mobile">Получатель</h2>
+                                <h2 class="basket-section__header">Получатель</h2>
                             </div>
                             <div class="card_info-user">
                                 <div class="user__information">
@@ -276,7 +283,7 @@
                     <div class="basket-form__sidebar sidebar">
                         <div class="sidebar__sticky-wrap">
                             <div class="basket-section basket-order">
-                                <div class="basket-order__b-delivery b-delivery hide-mobile">
+                                <div class="basket-order__b-delivery b-delivery">
                                     <div class="basket-order__b-top b-top">
                                         <div class="b-top__total line">
                                             <span class="total__summery">Итого</span>
@@ -312,12 +319,12 @@
                                         <span class="sidebar-with-text__text">Обратная доставка товаров на склад при отказе —  <span class="is__free">бесплатно</span></span>
                                     </div>
                                 </div>
-                                <div class="basket-order__b-payment b-payment hide-mobile">
+                                <div class="basket-order__b-payment b-payment">
                                     <div class="b-payment__pay title-btn">
                                         <span class="b-title">Оплата картой</span>
                                         <button class="btn-edit basket-order__edit edit-payment" type="button">Изменить</button>
                                     </div>
-                                    <p class="line">
+                                    <p class="line sidebar__mobile">
                                         <span class="card icon-mir"></span>
                                         <span>1234 12•• •••• 1234</span>
                                     </p>
@@ -349,6 +356,13 @@
         <span>© 2022  ООО «Товары и точка»</span>
     </div>
 </footer>
+<div class="mobile-menu">
+    <a href="#"><img src="mob/main.svg" alt="Главная"></a>
+    <a href="#"><img src="mob/catalog.svg" alt="Поиск"></a>
+    <a href="#" class="mob-menu__cart"><img src="mob/cart.svg" alt="Корзина"><span class="navbar-pc__notify">3</span></a>
+    <a href="#"><img src="mob/favorites.svg" alt="Сердце"></a>
+    <a href="#"><img src="mob/profile_svg.svg" alt="Профиль"></a>
+</div>
 <script src="basket_js.js"></script>
 </body>
 </html>
