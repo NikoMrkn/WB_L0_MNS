@@ -349,49 +349,27 @@ editDelivery.forEach( (trigger) => {
     const modalClose = document.querySelector(".modalClose");
     const modalActive = document.querySelector(".modalActive");
 
-    function bodyMargin() {
-        bodyElementHTML.style.marginRight = "-" + scrollbarWidth + "px";
-    }
-
-// при длинной странице - корректируем сразу
-//     bodyMargin();
-
     trigger.addEventListener("click", function () {
         // делаем модальное окно видимым
         modalBackground.style.display = "block";
 
         // если размер экрана больше 1366 пикселей (т.е. на мониторе может появиться ползунок)
-        if (windowInnerWidth >= 1366) {
-            bodyMargin();
-        }
-
-        // позиционируем наше окно по середине, где 175 - половина ширины модального окна
-        modalActive.style.left = "calc(50% - " + (175 - scrollbarWidth / 2) + "px)";
-    });
+            });
 
     modalClose.addEventListener("click", function () {
         modalBackground.style.display = "none";
-        if (windowInnerWidth >= 1366) {
-            bodyMargin();
-        }
-    });
+            });
 
 // закрытие модального окна на зону вне окна, т.е. на фон
     modalBackground.addEventListener("click", function (event) {
         if (event.target === modalBackground) {
             modalBackground.style.display = "none";
-            if (windowInnerWidth >= 1366) {
-                bodyMargin();
-            }
-        }
+                    }
     });
     let buttonCloseAddress = document.querySelector('.address-choose');
     buttonCloseAddress.addEventListener('click', function () {
         modalBackground.style.display = "none";
-        if (windowInnerWidth >= 1366) {
-            bodyMargin();
-        }
-    });
+            });
 });
 
 const editPayment = document.querySelectorAll('.edit-payment');
@@ -408,38 +386,21 @@ editPayment.forEach((trigger) => {
     trigger.addEventListener("click", function () {
         // делаем модальное окно видимым
         modalBackground.style.display = "block";
-
-        // если размер экрана больше 1366 пикселей (т.е. на мониторе может появиться ползунок)
-        if (windowInnerWidth >= 1366) {
-            bodyMargin();
-        }
-
-        // позиционируем наше окно по середине, где 175 - половина ширины модального окна
-        modalActive.style.left = "calc(50% - " + (175 - scrollbarWidth / 2) + "px)";
     });
 
     modalClose.addEventListener("click", function () {
         modalBackground.style.display = "none";
-        if (windowInnerWidth >= 1366) {
-            bodyMargin();
-        }
     });
 
 // закрытие модального окна на зону вне окна, т.е. на фон
     modalBackground.addEventListener("click", function (event) {
         if (event.target === modalBackground) {
             modalBackground.style.display = "none";
-            if (windowInnerWidth >= 1366) {
-                bodyMargin();
-            }
         }
     });
     let closePay = document.querySelector('.pay-choose');
     closePay.addEventListener('click', function() {
         modalBackground.style.display = "none";
-        if (windowInnerWidth >= 1366) {
-            bodyMargin();
-        }
     })
 });
 
