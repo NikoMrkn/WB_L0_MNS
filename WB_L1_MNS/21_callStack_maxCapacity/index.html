@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Callstack Capacity</title>
+</head>
+<body>
+    <script>
+        //Нет примых свойств или методов для определения размера коллстэка.
+        //Поэтому мы будем вызывать рекурсивные функции, увеличивая наш счетчик.
+        //Когда достигнет максимума вызовов, мы ловим ошибку и возвращаем наш счетчик.
+        function callStackMeasure(depth = 0) {
+            try {
+                return callStackMeasure(depth + 1)
+            } catch (e) {
+                return depth
+            }
+        }
+        const callStackSize = callStackMeasure();
+        console.log(`Размер коллстэка: ${callStackSize}`)
+    </script>
+</body>
+</html>
