@@ -1,0 +1,8 @@
+{
+  "name": "WB_L1_MNS",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "moment": "^2.29.4"
+  }
+}

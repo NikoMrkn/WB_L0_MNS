@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LocalStorage</title>
+</head>
+<body>
+<script>
+    function testLocalStorageCapacity() {
+        //Определяем переменную для подсчета размера LocalStorage и приравниваем к нулю
+        let size = 0;
+        try {
+            //Определяем переменные, которыми будем заполнять LocalStorage
+            const testKey = 'testKey';
+            const maxCapacity = 5 * 1024 * 1024; //что равно 5 MB. Максимальный объем составляет где-то 5-10MB (зависит от браузера)
+            const data = 'A'.repeat(1024); //1KB данных
+            //Заполняем LocalStorage и если заполняем localStorage раньше времени ловим ошибку и возвразаем результат
+            for (size = 0; size < maxCapacity; size += data.length) {
+                localStorage.setItem(testKey + size, data);
+            }
+
+            /*for (let cleanSize = 0; cleanSize < size; cleanSize += data.length) {
+                localStorage.removeItem(testKey + cleanSize);
+            } Если нужно будет удалить созданные нами данные, также можно запихнуть в catch*/
+            return size / 1024 / 1024
+        } catch (e) {
+            console.log(`Error occurred: ${e}`)
+            return size / 1024 / 1024;
+        }
+    }
+    const maxLocalStorageSizeMB = testLocalStorageCapacity();
+    console.log('Максимальный объем LocalStorage (MB):', maxLocalStorageSizeMB);
+</script>
+</body>
+</html>
