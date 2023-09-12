@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Виджет</title>
+    <script src="https://vk.com/js/api/openapi.js?169" type="text/javascript"></script>
+</head>
+<body>
+    <div id="widget-container" style="width: 400px; height: 400px; overflow: scroll;"></div>
+    
+    <div id="vk_auth"></div>
+    <script defer>
+        VK.init({
+            apiId: 51745467, // Заменяем apiId на ваш ID приложения ВКонтакте.
+        });
+    </script>
+    <script src="adding_widget.js"></script>
+</body>
+</html>
