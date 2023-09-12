@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблица данных</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        #pagination {
+            text-align: center;
+        }
+
+        #pagination button {
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Таблица данных</h1>
+    <table id="data-table">
+        <thead>
+        <tr>
+            <!-- Здесь будут заголовки колонок -->
+        </tr>
+        </thead>
+        <tbody id="data-body">
+        <!-- Здесь будут данные -->
+        </tbody>
+    </table>
+    <div id="pagination">
+        <!-- Здесь будут кнопки пагинации -->
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

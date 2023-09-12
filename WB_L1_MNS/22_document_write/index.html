@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doc write</title>
+</head>
+<body>
+    <script>
+        //Вызываем document.write рекурсивно и также как в задаче с коллбэками добавляем счетчик и выводим его когда достигается размер коллстэка.
+        //Что я вычитал из интернета, эта операция небезопасна и её стоит использовать только для учебных целей
+        let count = 0;
+        function writeCount() {
+            try {
+                document.write("Вызываем document.write()" + count + "<br>");
+                count++;
+                writeCount();
+            } catch (e) {
+                console.log('Достигнут максимальный размер колстэка');
+                console.log(`Количество вызово функции document.write(): ${count}`)
+            }
+        }
+        writeCount()
+    </script>
+</body>
+</html>

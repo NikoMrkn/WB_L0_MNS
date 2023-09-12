@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+
+        }
+        .password-message {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <label for="password-field">Введите пароль</label>
+    <input type="password" id="password-field" onfocusin="(this.type='text')" onfocusout="(this.type='password')">
+    <ul class="password-message"></ul>
+    <script src="evaluate_password.js"></script>
+</body>
+</html>
